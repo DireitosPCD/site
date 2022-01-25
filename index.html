@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <title>Site PCD</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .accordion-button.collapsed::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    .accordion-button {
+      border: 1px solid white;
+    }
+
+    .accordionList a {
+      color: white;
+    }
+
+    .accordionList {
+      list-style: none;
+    }
+
+    .accordionList li::before {
+      content: "\2022"; 
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .bg-red {
+      background-color: #B43A50;
+    }
+    
+    .bg-green {
+      background-color: #4FA86E;
+    }
+
+    .bg-yellow {
+      background-color: #366D90;
+    }
+
+    .accordion-button:not(.collapsed).bg-red {
+      background-color: #B43A50;
+    }
+
+    .accordion-button:not(.collapsed).bg-green {
+      background-color: #4FA86E;
+    }
+
+    .accordion-button:not(.collapsed).bg-yellow {
+      background-color: #366D90;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Direitos PCD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-primary" aria-current="page" href="index.html">Voltar para o início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" aria-current="page" href="sobre-nos.html">Sobre nós</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mb-5">
+      <form class="d-flex mt-5" id="searchForm" autocomplete="off">
+        <input id="searchInput" class="form-control me-2" type="search" placeholder="O que você está procurando?" aria-label="O que você está procurando?" required>
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+
+      <h1 class="text-center mt-5 mb-5" >Índice de conteúdos</h1>
+
+      <div class="accordion accordion-flush" id="mainAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed text-white fs-1 rounded bg-green" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <i class="bi bi-book me-3"></i>
+              Educação
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+            <div class="accordion-body bg-green">
+              <ul class="accordionList fs-3" id="accordionListOne">
+                <li><a href="content/educacao/ensino-fundamental.html">Ensino fundamental</a></li>
+                <li><a href="content/educacao/ensino-medio.html">Ensino médio</a></li>
+                <li><a href="">Ensino técnico</a></li>
+                <li><a href="">Ensino superior</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed text-white fs-1 rounded bg-red" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <i class="bi bi-briefcase me-3"></i>
+              Cargos públicos
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+            <div class="accordion-body bg-red">
+              <ul class="accordionList fs-3" id="accordionListTwo">
+                <li><a href="">Concursos públicos</a></li>
+                <li><a href="">Meu direito à educação</a></li>
+                <li><a href="">Servidores públicos</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed text-white fs-1 bg-yellow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <i class="bi bi-bank me-3"></i>
+              Direito previdenciário
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+            <div class="accordion-body bg-yellow">
+              <ul class="accordionList fs-3" id="accordionListThree">
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function processForm(e) {
+          if (e.preventDefault) 
+            e.preventDefault();
+          const searchQuery = document.getElementById('searchInput').value
+
+          if(searchQuery != null && searchQuery != '')
+            window.location.href = `resultados.html?query=${searchQuery}`
+      }
+
+      var form = document.getElementById('searchForm');
+      if (form.attachEvent) {
+          form.attachEvent("submit", processForm);
+      } else {
+          form.addEventListener("submit", processForm);
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
