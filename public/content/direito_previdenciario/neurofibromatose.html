@@ -79,6 +79,7 @@
           let url = window.location.href.split('/');
           url.splice(url.length - 3, 3)
           url = url.reduce((a, b) => a + b + '/')
+          console.log(url);
           if(searchQuery != null && searchQuery != '')
             window.location.href = `${url}resultados.html?query=${searchQuery}`
       }
