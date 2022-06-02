@@ -203,11 +203,8 @@
           if (e.preventDefault) 
             e.preventDefault();
           const searchQuery = document.getElementById('searchInput').value
-          let url = window.location.href.split('/');
-          url.splice(url.length - 3, 3)
-          url = url.reduce((a, b) => a + b + '/')
           if(searchQuery != null && searchQuery != '')
-            window.location.href = `${url}resultados.html?query=${searchQuery}`
+            window.location.href = `../../resultados.html?query=${searchQuery}`
       }
 
       var form = document.getElementById('searchForm');
