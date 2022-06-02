@@ -79,17 +79,17 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Direitos PCD</a>
+        <a class="navbar-brand" href="">Direitos PCD</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-primary" aria-current="page" href="index.html">Voltar para o início</a>
+              <a class="nav-link text-primary" aria-current="page" href="">Voltar para o início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-primary" aria-current="page" href="sobre-nos.html">Sobre nós</a>
+              <a class="nav-link text-primary" aria-current="page" href="public/sobre-nos.html">Sobre nós</a>
             </li>
           </ul>
         </div>
@@ -103,8 +103,6 @@
       </form>
 
       <h1 class="text-center mt-5 mb-5" >Índice de conteúdos</h1>
-
-      <!--  -->
       <div class="accordion accordion-flush" id="mainAccordion">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -116,10 +114,7 @@
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
             <div class="accordion-body bg-green">
               <ul class="accordionList fs-3" id="accordionListOne">
-                <li><a href="content/educacao/ensino-fundamental.html">Ensino fundamental</a></li>
-                <li><a href="content/educacao/ensino-medio.html">Ensino médio</a></li>
-                <li><a href="">Ensino técnico</a></li>
-                <li><a href="">Ensino superior</a></li>
+                <li><a href="">Em breve...</a></li>
               </ul>
             </div>
           </div>
@@ -135,9 +130,7 @@
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
             <div class="accordion-body bg-red">
               <ul class="accordionList fs-3" id="accordionListTwo">
-                <li><a href="">Concursos públicos</a></li>
-                <li><a href="">Meu direito à educação</a></li>
-                <li><a href="">Servidores públicos</a></li>
+                <li><a href="public/content/cargos_publicos/concurso_doenca_rara.html">Concursos públicos para portadores de doenças raras</a></li>
               </ul>
             </div>
           </div>
@@ -153,9 +146,7 @@
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
             <div class="accordion-body bg-yellow">
               <ul class="accordionList fs-3" id="accordionListThree">
-                <li><a href="">Link 1</a></li>
-                <li><a href="">Link 2</a></li>
-                <li><a href="">Link 3</a></li>
+                <li><a href="public/content/direito_previdenciario/neurofibromatose.html">INSS para portadores de neurofibromatose</a></li>
               </ul>
             </div>
           </div>
@@ -170,7 +161,7 @@
           const searchQuery = document.getElementById('searchInput').value
 
           if(searchQuery != null && searchQuery != '')
-            window.location.href = `resultados.html?query=${searchQuery}`
+            window.location.href = `public/resultados.html?query=${searchQuery}`
       }
 
       var form = document.getElementById('searchForm');

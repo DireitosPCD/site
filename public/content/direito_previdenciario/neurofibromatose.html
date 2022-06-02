@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/global.css">
+    <title>Site PCD</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../../index.html">Direitos PCD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-primary" aria-current="page" href="../../../index.html">Voltar para o início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" aria-current="page" href="../../sobre-nos.html">Sobre nós</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 w-75 d-flex justify-content-end" id="searchForm">
+              <input id="searchInput" class="form-control w-100 me-3" type="search" placeholder="O que você está procurando?" aria-label="O que você está procurando?" required>
+              <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="text-center mt-5 mb-5" >Sou portador de neurofibromatose, quais são meus direitos no INSS? Posso me aposentar?</h1>
+      <p>Autor(a): <a href="">Marília Rocha</a></p>
+      <div class="card mt-5">
+        <div class="card-body">
+          <p>A pessoa diagnosticada com NF, poderá ter direito a alguns benefícios previdenciários, sendo eles: auxílio doença, aposentadoria por invalidez ou benefício de prestação continuada-BPC.</p>
+          <ul>
+            <li>
+              <p><strong>É necessário ter contribuído para solicitar esses benefícios?</strong></p>
+              <p>O auxílio doença e a aposentadoria por invalidez são benefícios para quem realiza contribuições ao INSS.</p>
+              <p>Já o BPC é um benefício para pessoas que não realizaram contribuições e possuem baixa renda familiar.</p>
+            </li>
+
+            <li>
+              <p><strong>O que é necessário para solicitar esses benefícios?</strong></p>
+              <ol type="I">
+                <li>
+                  <p>Para realizar o pedido de benefícios previdenciários perante o INSS, a primeira etapa a ser realizada é ter o diagnóstico através do laudo médico. </p>
+                  <p>Atenção! Neste laudo médico é necessário conter informações importantes que serão avaliadas para verificação do direito: CID da doença, sintomas, limitações e dificuldades, histórico, tratamento,  e  informações peculiares da progressão da doença de acordo com cada caso.</p>
+                </li>
+
+                <li>
+                  <p>O segundo passo é solicitar a perícia médica no INSS em que o perito irá avaliar se a pessoa tem condições de trabalhar ou se é portadora de necessidades especiais.</p>
+                  <p>O perito do INSS pode entender que a pessoa receberá o benefício por um período temporário e conceder o auxílio doença, ou pode entender que ela deve se aposentar por não ter mais condições de trabalhar mesmo que passe por um tratamento e concederá a aposentadoria por invalidez.</p>
+                  <p>No caso de BPC o perito irá avaliar se a pessoa possui um impedimento de de longo prazo (pelo menos 2 anos) de natureza física, mental, intelectual, ou sensorial, e que esses impedimentos podem dificultar sua participação na sociedade, em igualdade de condições com as demais pessoas. Além disso serão analisadas questões sociais como a renda do grupo familiar.</p>
+                </li>
+
+                <li>
+                  <p>Caso seja negado o direito no INSS, a pessoa poderá acionar a justiça para solicitar seu direito.</p>
+                  <p>Basicamente, esses são os direitos e dependerá da avaliação do perito do INSS que identificará as dificuldades e limitações que a doença causa em cada pessoa.</p>
+                  <p>Neste site você encontra outros artigos que possuem informações mais detalhadas sobre os requisitos de cada benefício.</p>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function processForm(e) {
+          if (e.preventDefault) 
+            e.preventDefault();
+          const searchQuery = document.getElementById('searchInput').value
+          let url = window.location.href.split('/');
+          url.splice(url.length - 3, 3)
+          url = url.reduce((a, b) => a + b + '/')
+          if(searchQuery != null && searchQuery != '')
+            window.location.href = `${url}resultados.html?query=${searchQuery}`
+      }
+
+      var form = document.getElementById('searchForm');
+      if (form.attachEvent) {
+          form.attachEvent("submit", processForm);
+      } else {
+          form.addEventListener("submit", processForm);
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
